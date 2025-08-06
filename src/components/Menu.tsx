@@ -1,3 +1,9 @@
+import Link from "next/link";
+import Image from "next/image";
+
+
+// Define the menu items with their visibility based on user roles
+
 const menuItems = [
   {
     title: "MENU",
@@ -112,3 +118,24 @@ const menuItems = [
     ],
   },
 ];
+
+const Menu = () => {
+  return (
+    <div className="mt-4 text-sm">
+      {menuItems.map((i) => (
+        <div className="" key={i.title} >
+          <span>{i.title}</span>
+            {i.items.map((item) => (
+                <Link href={item.href} key={item.label}>
+                  <Image src={item.icon} alt="" width={20} height={20} />
+                  <span>{item.label}</span>
+                </Link>
+            ))}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Menu;
+ 
