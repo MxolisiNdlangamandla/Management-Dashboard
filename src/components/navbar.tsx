@@ -6,7 +6,7 @@ const Navbar = () => {
       {/* search bar */}
       <div className='hidden md:flex items-center gap-2 tex-sx rounded-full ring-[1.5px] ring-gray-300 px-2'>
         <Image src="/search.png" alt="Search" width={14} height={14}/>
-        <input type="text" placeholder="Search..." className="border border-gray-300 rounded-md p-2"/>
+        <input type="text" placeholder="Search..." className="w-[200px] p-2 bg-transparent outline-none"/>
       </div>
       {/* Icons and User */}
       <div className='flex items-center gap-6 justify-end w-full'>
@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="bg-white rounded-full w-7 h-7 flex items-center justify-center cursor-pointer">
           <Image src="/announcement.png" alt="Announcement" width={20} height={20}/>
           <div>
-            <span className="absolute top-3 right-3 w-3 h-5 flex items-center justify-center bg-purple-500 text-white text-xs rounded-full">
+            <span className="absolute -top-3 -right-3 w-5 h-5 flex items-center justify-center bg-purple-500 text-white text-xs rounded-full relative">
               3
             </span>
           </div>
